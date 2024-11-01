@@ -1,0 +1,67 @@
+# Python cache and byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files
+.env
+.env.*
+*.env
+*.venv
+venv/
+.venv/
+ENV/
+env/
+.venv
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Streamlit-specific files
+.streamlit/secrets.toml
+.streamlit/*.yaml
+
+# Data files
+data/
+!data/README.md  # Keeps README for data directory tracking in Git (optional)
+
+# Model files and large binaries
+models/
+!models/README.md  # Keeps README for models directory tracking in Git (optional)
+
+# Log and debug files
+*.log
+logs/
+debug.log
+
+# Ignore virtual environments
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.bak
+
+# Ignore temporary files created by editors and IDEs
+.vscode/
+.idea/
+*.swp
+
+# Pytest and coverage reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+
+# Streamlit deployment files
+.streamlit/*.toml
+
+# Jupyter Notebook metadata
+.ipynb_checkpoints/
+__MACOSX/
+
