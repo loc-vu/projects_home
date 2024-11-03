@@ -2,7 +2,9 @@ import sys
 import os
 import requests
 import feedparser
-from typing import List, Optional
+from datetime import datetime
+
+from typing import List, Dict, Optional
 
 sys.path.append('/Users/locvu/Documents/ds/paper_rec')
 from models.research_paper import ResearchPaper
@@ -37,8 +39,25 @@ class ArxivClient:
         response = requests.get(self.BASE_URL, params=params)
         response.raise_for_status()
         
-        return feedparser.parse(response.text)
+        return self._process_paper(feedparser.parse(response.text)['entries'])
     
+    def _process_paper(self, papers_info: List[Dict]):
+
+        papers = []
+        for p in papers_info:
+            papers.append(
+                ResearchPaper(
+                    id=p['id'],
+                    title=p['title'],
+                    authors=[a['name'] for a in p['authors']],
+                    abstract=p['summary'],
+                    publication_date=datetime.strptime(p['published'], '%Y-%m-%dT%H:%M:%SZ'),
+                    pdf_url=p['id'].replace('/abs/', '/pdf/'),
+                    categories=p['arxiv_primary_category']['term']
+                )
+            )
+
+        return papers
 
 
 if __name__ == "__main__":
