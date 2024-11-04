@@ -12,11 +12,10 @@ def display_paper_card(paper: ResearchPaper, number: int):
     card_style = """
     <style>
         .card {
-            background-color: #f9f9f9;
             padding: 15px;
             margin: 10px 0;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(189, 195, 199, 0.6);
             font-family: 'Times New Roman', Times, serif;
         }
         .card-number {
@@ -25,7 +24,6 @@ def display_paper_card(paper: ResearchPaper, number: int):
             right: 5px;
             font-size: 0.8rem;
             font-weight: bold;
-            color: rgba(0, 0, 0, 0.3); /* Slightly opaque */
             padding: 2px 6px;
         }
 
@@ -33,16 +31,13 @@ def display_paper_card(paper: ResearchPaper, number: int):
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 5px;
-            color: #333;
         }
         .card-authors {
             font-size: 0.9rem;
-            color: #555;
             margin-bottom: 10px;
         }
         .card-abstract {
             font-size: 0.95rem;
-            color: #444;
         }
     </style>
     """
