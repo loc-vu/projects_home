@@ -1,6 +1,11 @@
 
 **CURRENTLY UNDER DEVELOPMENT**
 
+# Personal Project Home Page
+### Simple web app to showcase some personal projects I've been working on
+Current WIP, Research Paper Recommender System
+
+
 ## Research Paper Recommender System
 ### A simple research paper recommender system / search tool specifically for papers from Arxiv
 
