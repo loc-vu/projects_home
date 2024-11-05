@@ -50,6 +50,7 @@ jupyter_server_terminals==0.5.3
 jupyterlab==4.3.0
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.27.3
+kagglehub==0.3.3
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
@@ -108,6 +109,7 @@ terminado==0.18.1
 tinycss2==1.4.0
 toml==0.10.2
 tornado==6.4.1
+tqdm==4.66.6
 traitlets==5.14.3
 types-python-dateutil==2.9.0.20241003
 typing_extensions==4.12.2
