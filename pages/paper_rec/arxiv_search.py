@@ -7,17 +7,25 @@ from services.arxiv_client import ArxivClient
 from components.paper_card import display_paper_card
 
 st.set_page_config(
-    page_title="Research Paper Recommender",
+    page_title="Paper Recommender",
     layout="wide",
 )
 
 st.title("Research Paper Recommender")
-search_query = st.text_input("What research paper are you looking for?", value="")
-max_entries = st.selectbox(
-    "Max Entries",
-    options=[5, 10, 20, 50, 100],
-    help="Choose the maximum number of research papers to retreive"
-)
+with st.form(" "):
+    search_query = st.text_input("What research paper are you looking for?", value="")
+    
+    # TODO: Add column to select the type of recommender system to use
+    max_entries_col, _ = st.columns([.1, .9])
+
+    with max_entries_col:
+        max_entries = st.selectbox(
+            "Max Entries",
+            options=[5, 10, 20, 50, 100],
+            help="Choose the maximum number of research papers to retreive"
+        )
+    st.form_submit_button("Search")
+
 
 
 arxiv_client = ArxivClient()
