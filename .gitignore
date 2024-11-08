@@ -27,7 +27,7 @@ data/
 !data/README.md  # Keeps README for data directory tracking in Git (optional)
 
 # Model files and large binaries
-models/
+# models/
 !models/README.md  # Keeps README for models directory tracking in Git (optional)
 
 # Log and debug files
