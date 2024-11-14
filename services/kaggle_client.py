@@ -3,6 +3,7 @@ import argparse
 
 import kagglehub
 
+
 class KaggleClient:
     """Class for downloading data from Kaggle API"""
 
@@ -18,23 +19,21 @@ class KaggleClient:
             print(f"Moving data: {src_dir} -> {dest_dir}")
 
 
-
 if __name__ == "__main__":
-        # Set up argument parsing for the save path
-    parser = argparse.ArgumentParser(description="Download Arxiv metadata from Kaggle and save to specified path.")
+    # Set up argument parsing for the save path
+    parser = argparse.ArgumentParser(
+        description="Download Arxiv metadata from Kaggle and save to specified path."
+    )
 
     parser.add_argument(
         "-d",
         "--dataset",
         required=True,
         type=str,
-        help="Kaggle dataset handle to download data from."
+        help="Kaggle dataset handle to download data from.",
     )
     parser.add_argument(
-        "-o",
-        "--dest_dir",
-        type=str,
-        help="Path to move downloaded files to."
+        "-o", "--dest_dir", type=str, help="Path to move downloaded files to."
     )
 
     args = parser.parse_args()

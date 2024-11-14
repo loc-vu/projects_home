@@ -2,10 +2,7 @@ import streamlit as st
 
 st.title("Terms of Service AI")
 st.markdown("I can help summarize and answer questions about common Terms of Services")
-st.file_uploader(
-    label="Upload Terms of Service",
-    type=['pdf', 'txt', 'md']
-)
+st.file_uploader(label="Upload Terms of Service", type=["pdf", "txt", "md"])
 
 # # Initialize chat history
 # if "messages" not in st.session_state:

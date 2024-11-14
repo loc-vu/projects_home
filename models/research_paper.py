@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import List, Optional
 from datetime import datetime
 
+
 @dataclass
 class ResearchPaper:
     """Base data model for representing a research paper"""

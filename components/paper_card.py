@@ -1,6 +1,7 @@
 import streamlit as st
 from models.research_paper import ResearchPaper
 
+
 def display_paper_card(paper: ResearchPaper, number: int):
     """
     Display a research paper's details in a card format.

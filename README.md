@@ -24,4 +24,3 @@ Current WIP, Research Paper Recommender System
 	a. Info cards with paper title, author, abstract, link to full text (PDF), ...
 3. As a user, I want to read a summary of the paper full text
 	a. Within each info card, have a button to execute paper summarization
-
