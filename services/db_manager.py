@@ -1,6 +1,7 @@
 import sqlite3
 from typing import List, Dict
 
+
 class ArxivDB:
     def __init__(self, db_path):
         self.db_path = db_path
